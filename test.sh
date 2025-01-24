@@ -1,0 +1,1 @@
+python3 main.py --arch="tsrn_tl_cascade" --test_model="CRNN" --batch_size=48 --STN --mask  --sr_share --gradient --go_test --stu_iter=1 --vis_dir='default' --resume="./ckpt/vis_TPGSR-TSRN/model_best_0.pth"

@@ -1,0 +1,272 @@
+GNU gdb (Ubuntu 12.1-0ubuntu1~22.04) 12.1
+Copyright (C) 2022 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word".
+[New LWP 705591]
+[New LWP 705592]
+[New LWP 705593]
+[New LWP 705679]
+[New LWP 705680]
+[New LWP 705681]
+[New LWP 705682]
+[New LWP 705683]
+[New LWP 705684]
+[New LWP 705685]
+[New LWP 705686]
+[New LWP 705687]
+[New LWP 705688]
+[New LWP 705696]
+[New LWP 705697]
+[New LWP 705698]
+[New LWP 705699]
+[New LWP 705700]
+[New LWP 705701]
+[New LWP 705702]
+[New LWP 705703]
+[New LWP 705704]
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+0x00007f7f3aeea42f in __GI___wait4 (pid=705795, stat_loc=stat_loc@entry=0x0, options=options@entry=0, usage=usage@entry=0x0) at ../sysdeps/unix/sysv/linux/wait4.c:30
+
+Stack backtrace
+---------------
+    stat_loc=stat_loc@entry=0x0, options=options@entry=0, 
+    usage=usage@entry=0x0) at ../sysdeps/unix/sysv/linux/wait4.c:30
+        sc_ret = -512
+        sc_cancel_oldtype = 0
+        sc_ret = <optimized out>
+#1  0x00007f7f3aeea3ab in __GI___waitpid (pid=<optimized out>, 
+    stat_loc=stat_loc@entry=0x0, options=options@entry=0)
+    at ./posix/waitpid.c:38
+No locals.
+#2  0x00007f7e5842cf4c in print_enhanced_backtrace ()
+    at build/src/cysignals/implementation.c:672
+        parent_pid = 705542
+        pid = <optimized out>
+#3  sigdie (sig=sig@entry=6, 
+    s=s@entry=0x7f7e58435950 "Unhandled SIGABRT: An abort() occurred.")
+    at build/src/cysignals/implementation.c:698
+No locals.
+#4  0x00007f7e5842eb7f in sigdie_for_sig (inside=0, sig=6)
+    at build/src/cysignals/implementation.c:252
+No locals.
+#5  cysigs_signal_handler (sig=6) at build/src/cysignals/implementation.c:361
+        inside = <optimized out>
+#6  <signal handler called>
+No locals.
+#7  __pthread_kill_implementation (no_tid=0, signo=6, threadid=140184427849536)
+    at ./nptl/pthread_kill.c:44
+        tid = <optimized out>
+        ret = 0
+        pd = 0x7f7f3b066740
+        old_mask = {__val = {0, 140737207581936, 3375780176, 140737207581248, 
+            3, 0, 140184382874144, 140184382838916, 0, 140737207582176, 0, 0, 
+            0, 0, 0, 0}}
+        ret = <optimized out>
+        pd = <optimized out>
+        old_mask = <optimized out>
+        ret = <optimized out>
+        tid = <optimized out>
+        ret = <optimized out>
+        resultvar = <optimized out>
+        resultvar = <optimized out>
+        __arg3 = <optimized out>
+        __arg2 = <optimized out>
+        __arg1 = <optimized out>
+        _a3 = <optimized out>
+        _a2 = <optimized out>
+        _a1 = <optimized out>
+        __futex = <optimized out>
+        resultvar = <optimized out>
+        __arg3 = <optimized out>
+        __arg2 = <optimized out>
+        __arg1 = <optimized out>
+        _a3 = <optimized out>
+        _a2 = <optimized out>
+        _a1 = <optimized out>
+        __futex = <optimized out>
+        __private = <optimized out>
+        __oldval = <optimized out>
+        result = <optimized out>
+#8  __pthread_kill_internal (signo=6, threadid=140184427849536)
+    at ./nptl/pthread_kill.c:78
+No locals.
+#9  __GI___pthread_kill (threadid=140184427849536, signo=signo@entry=6)
+    at ./nptl/pthread_kill.c:89
+No locals.
+#10 0x00007f7f3ae42476 in __GI_raise (sig=sig@entry=6)
+    at ../sysdeps/posix/raise.c:26
+        ret = <optimized out>
+#11 0x00007f7f3ae287f3 in __GI_abort () at ./stdlib/abort.c:79
+        save_stage = 1
+        act = {__sigaction_handler = {sa_handler = 0xd68, 
+            sa_sigaction = 0xd68}, sa_mask = {__val = {140184427542176, 1, 
+              140184427542307, 3432, 140184425908705, 3318288536, 10, 
+              140184427542176, 140184427849536, 2, 4, 140184382874144, 
+              140184425909955, 10, 140184427542176, 140184427849536}}, 
+          sa_flags = 988313146, sa_restorer = 0x6ee4f8 <stderr@GLIBC_2.2.5>}
+        sigs = {__val = {32, 0, 0, 0, 10, 114, 140183876601920, 
+            140737207581600, 0, 140184426465492, 0, 1, 140184427542307, 1, 
+            3318288536, 140184425901805}}
+#12 0x00007f7f1a2a2b9e in ?? () from /lib/x86_64-linux-gnu/libstdc++.so.6
+No symbol table info available.
+#13 0x00007f7f1a2ae20c in ?? () from /lib/x86_64-linux-gnu/libstdc++.so.6
+No symbol table info available.
+#14 0x00007f7f1a2ad1e9 in ?? () from /lib/x86_64-linux-gnu/libstdc++.so.6
+No symbol table info available.
+#15 0x00007f7f1a2ad959 in __gxx_personality_v0 ()
+   from /lib/x86_64-linux-gnu/libstdc++.so.6
+No symbol table info available.
+#16 0x00007f7f38579884 in ?? () from /lib/x86_64-linux-gnu/libgcc_s.so.1
+No symbol table info available.
+#17 0x00007f7f3857a2dd in _Unwind_Resume ()
+   from /lib/x86_64-linux-gnu/libgcc_s.so.1
+No symbol table info available.
+#18 0x00007f7f2f10bfab in c10::cuda::CUDACachingAllocator::raw_delete(void*) [clone .cold] ()
+   from /home/jinw/anaconda3/envs/TPGSR/lib/python3.7/site-packages/torch/lib/libc10_cuda.so
+No symbol table info available.
+#19 0x00007f7f174f6823 in c10::StorageImpl::~StorageImpl() ()
+   from /home/jinw/anaconda3/envs/TPGSR/lib/python3.7/site-packages/torch/lib/libtorch_python.so
+No symbol table info available.
+#20 0x00007f7f384999e0 in c10::TensorImpl::~TensorImpl() ()
+   from /home/jinw/anaconda3/envs/TPGSR/lib/python3.7/site-packages/torch/lib/libc10.so
+No symbol table info available.
+#21 0x00007f7f38499af9 in c10::TensorImpl::~TensorImpl() ()
+   from /home/jinw/anaconda3/envs/TPGSR/lib/python3.7/site-packages/torch/lib/libc10.so
+No symbol table info available.
+#22 0x00007f7f17767108 in THPVariable_clear(THPVariable*) ()
+   from /home/jinw/anaconda3/envs/TPGSR/lib/python3.7/site-packages/torch/lib/libtorch_python.so
+No symbol table info available.
+#23 0x00007f7f17767508 in THPVariable_subclass_dealloc(_object*) ()
+   from /home/jinw/anaconda3/envs/TPGSR/lib/python3.7/site-packages/torch/lib/libtorch_python.so
+No symbol table info available.
+#24 0x00000000004b5cfb in tupledealloc (op=0x7f7e41f00cb0)
+    at /usr/local/src/conda/python-3.7.16/Objects/tupleobject.c:246
+        _py_decref_tmp = <optimized out>
+        _py_xdecref_tmp = <optimized out>
+        _tstate = 0x2244d20
+        i = <optimized out>
+        len = 4
+#25 0x00000000004b5cfb in tupledealloc (op=0x7f7ebbd2b450)
+    at /usr/local/src/conda/python-3.7.16/Objects/tupleobject.c:246
+        _py_decref_tmp = <optimized out>
+        _py_xdecref_tmp = <optimized out>
+        _tstate = 0x2244d20
+        i = <optimized out>
+        len = 1
+#26 0x00000000004b0858 in frame_dealloc (f=0xc95e2960)
+    at /usr/local/src/conda/python-3.7.16/Objects/frameobject.c:470
+        _py_decref_tmp = <optimized out>
+        _py_tmp = <optimized out>
+        _tstate = 0x2244d20
+        p = 0xc95e2ad0
+        valuestack = 0xc95e2af8
+        co = <optimized out>
+#27 0x00000000004c5b50 in tb_dealloc (tb=0x7f7ebb52fc30)
+    at /usr/local/src/conda/python-3.7.16/Python/traceback.c:168
+        _py_decref_tmp = <optimized out>
+        _py_xdecref_tmp = <optimized out>
+        _tstate = 0x2244d20
+#28 0x00000000004c5b66 in tb_dealloc (tb=0x7f7ebb52fbe0)
+    at /usr/local/src/conda/python-3.7.16/Python/traceback.c:167
+        _py_xdecref_tmp = <optimized out>
+        _py_decref_tmp = <optimized out>
+        _tstate = 0x2244d20
+#29 0x00000000004c5b66 in tb_dealloc (tb=0x7f7ebb52fb40)
+    at /usr/local/src/conda/python-3.7.16/Python/traceback.c:167
+        _py_xdecref_tmp = <optimized out>
+        _py_decref_tmp = <optimized out>
+        _tstate = 0x2244d20
+#30 0x00000000004c5b66 in tb_dealloc (tb=0x7f7e42bfc690)
+    at /usr/local/src/conda/python-3.7.16/Python/traceback.c:167
+        _py_xdecref_tmp = <optimized out>
+        _py_decref_tmp = <optimized out>
+        _tstate = 0x2244d20
+#31 0x00000000004c5b66 in tb_dealloc (tb=0x7f7ebbda3050)
+    at /usr/local/src/conda/python-3.7.16/Python/traceback.c:167
+        _py_xdecref_tmp = <optimized out>
+        _py_decref_tmp = <optimized out>
+        _tstate = 0x2244d20
+#32 0x00000000004c5b66 in tb_dealloc (tb=0x7f7e43325050)
+    at /usr/local/src/conda/python-3.7.16/Python/traceback.c:167
+        _py_xdecref_tmp = <optimized out>
+        _py_decref_tmp = <optimized out>
+        _tstate = 0x2244d20
+#33 0x00000000004946f7 in insertdict (mp=<optimized out>, key=0x7f7f3a0cb0b0, 
+    hash=<optimized out>, value=<optimized out>)
+    at /usr/local/src/conda/python-3.7.16/Objects/dictobject.c:1076
+        _py_decref_tmp = <optimized out>
+        _py_xdecref_tmp = <optimized out>
+        old_value = 0x7f7e43325050
+        ep = <optimized out>
+        ix = <optimized out>
+#34 0x0000000000499261 in PyDict_SetItemString (v=0x7f7f3adf2b90, 
+    key=<optimized out>, item=0x6dda70 <_Py_NoneStruct>)
+    at /usr/local/src/conda/python-3.7.16/Objects/dictobject.c:3293
+        kv = 0x7f7f3a0cb0b0
+        err = <optimized out>
+#35 0x000000000056f719 in PyImport_Cleanup ()
+    at /usr/local/src/conda/python-3.7.16/Python/import.c:426
+        pos = 0
+        key = 0x193d3700a5b10700
+        value = 0x9
+        dict = <optimized out>
+        interp = 0x22439c0
+        modules = 0x7f7f3adf2aa0
+        weaklist = 0x0
+        p = 0x618550 <sys_deletes+48>
+        PyId_clear = {next = 0x0, string = 0x5cf511 "clear", object = 0x0}
+#36 0x000000000056b1a7 in Py_FinalizeEx ()
+    at /usr/local/src/conda/python-3.7.16/Python/pylifecycle.c:1199
+        interp = 0x22439c0
+        tstate = <optimized out>
+        status = <optimized out>
+        malloc_stats = 0
+#37 0x000000000053fc79 in pymain_main (pymain=0x7fffef43c700)
+    at /usr/local/src/conda/python-3.7.16/Modules/main.c:3519
+        res = <optimized out>
+#38 0x000000000053fb3c in _Py_UnixMain (argc=<optimized out>, 
+    argv=<optimized out>)
+    at /usr/local/src/conda/python-3.7.16/Modules/main.c:3552
+        pymain = {argc = 13, use_bytes_argv = 1, bytes_argv = 0x7fffef43c888, 
+          wchar_argv = 0x0, status = 1, err = {prefix = 0x0, msg = 0x0, 
+            user_err = 0}, stdin_is_interactive = 1, skip_first_line = 0, 
+          filename = 0x2241b90 L"main.py", command = 0x0, module = 0x0, 
+          main_importer_path = 0x0}
+#39 0x00007f7f3ae29d90 in __libc_start_call_main (
+    main=main@entry=0x53faf0 <main>, argc=argc@entry=13, 
+    argv=argv@entry=0x7fffef43c888)
+    at ../sysdeps/nptl/libc_start_call_main.h:58
+        self = <optimized out>
+        result = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {0, -115171699387421006, 
+                140737207584904, 5503728, 0, 140184429207616, 
+                115138059872218802, 42966947910364850}, mask_was_saved = 0}}, 
+          priv = {pad = {0x0, 0x0, 0x0, 0x0}, data = {prev = 0x0, 
+              cleanup = 0x0, canceltype = 0}}}
+        not_first_call = <optimized out>
+#40 0x00007f7f3ae29e40 in __libc_start_main_impl (main=0x53faf0 <main>, 
+    argc=13, argv=0x7fffef43c888, init=<optimized out>, fini=<optimized out>, 
+    rtld_fini=<optimized out>, stack_end=0x7fffef43c878)
+    at ../csu/libc-start.c:392
+No locals.
+#41 0x000000000053f9ee in _start ()
+No symbol table info available.
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[Inferior 1 (process 705542) detached]
+30	../sysdeps/unix/sysv/linux/wait4.c: No such file or directory.
+Traceback (most recent call last):
+  File "<string>", line 25, in <module>
+ModuleNotFoundError: No module named 'Cython'
+Error while executing Python code.
