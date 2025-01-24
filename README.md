@@ -26,18 +26,8 @@ Unzip the codes and walk into the 'TPGSR_ROOT/', place the pretrained weights fr
 
 ### Train the corresponding model (e.g. TPGSR-TSRN):
 ```
-chmod a+x train_TPGSR-TSRN.sh
-./train_TPGSR-TSRN.sh
-or
-python3 main.py --arch="tsrn_tl_cascade" \       # The architecture
-                --batch_size=48 \                # The batch size
-                --STN \                          # Using STN net for alignment
-		--mask \                         # Using the contour mask
-		--use_distill \                  # Using the TP loss
-		--gradient \                     # Using the Gradient Prior Loss
-		--sr_share \                     # Sharing weights for SR Module
-		--stu_iter=1 \                   # The number of interations in multi-stage version
-		--vis_dir='vis_TPGSR-TSRN' \     # The checkpoint directory
+chmod a+x train.sh
+./train.sh
 ```
 
 ### Run the test-prefixed shell to test the corresponding model.
@@ -46,5 +36,5 @@ Adding '--go_test' in the shell file
 ```
 ## Cite this paper:
 
-	
+​	
 
