@@ -34,7 +34,3 @@ chmod a+x train.sh
 ```
 Adding '--go_test' in the shell file
 ```
-## Cite this paper:
-
-​	
-
